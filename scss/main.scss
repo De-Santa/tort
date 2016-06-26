@@ -11,10 +11,18 @@
   	border: 3px solid $tabs-color;;
   	overflow: hidden;
   	position: relative;
+  	cursor: pointer;
 
-  	&:hover  img {
-			transform: scale(1.3);
+  	&:hover > .menu-item-image-wrapper {
+			&::before {
+				background-color: transparent;
+			}
   	}
+
+  	&:hover img {
+			transform: scale(1.3);
+  	}  	
+
 		.menu-item-image-wrapper {
 			position: relative;
 			width: 100%;
@@ -28,6 +36,7 @@
 				top: 0;
 				left: 0;
 				z-index: 1;
+				transition: all 1s ease;
   		}
 			img {
 				position: absolute;
