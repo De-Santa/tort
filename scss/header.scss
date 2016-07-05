@@ -11,12 +11,13 @@ body {
 	line-height: 1.4;
 	font-family: "CaviarDreamsRegular", sans-serif;
 	overflow-x: hidden;
-	background: -moz-linear-gradient(45deg, rgba(70,85,105,1) 0%, rgba(70,85,105,1) 28%, rgba(232,228,223,1) 100%); /* ff3.6+ */
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(70,85,105,1)), color-stop(28%, rgba(70,85,105,1)), color-stop(100%, rgba(232,228,223,1))); /* safari4+,chrome */
-	background: -webkit-linear-gradient(45deg, rgba(70,85,105,1) 0%, rgba(70,85,105,1) 28%, rgba(232,228,223,1) 100%); /* safari5.1+,chrome10+ */
-	background: -o-linear-gradient(45deg, rgba(70,85,105,1) 0%, rgba(70,85,105,1) 28%, rgba(232,228,223,1) 100%); /* opera 11.10+ */
-	background: -ms-linear-gradient(45deg, rgba(70,85,105,1) 0%, rgba(70,85,105,1) 28%, rgba(232,228,223,1) 100%); /* ie10+ */
-	background: linear-gradient(45deg, rgba(70,85,105,1) 0%, rgba(70,85,105,1) 28%, rgba(232,228,223,1) 100%); /* w3c */
+	//background: -moz-linear-gradient(45deg, rgba(70,85,105,1) 0%, rgba(70,85,105,1) 28%, rgba(232,228,223,1) 100%); /* ff3.6+ */
+	//background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(70,85,105,1)), color-stop(28%, rgba(70,85,105,1)), color-stop(100%, rgba(232,228,223,1))); /* safari4+,chrome */
+	//background: -webkit-linear-gradient(45deg, rgba(70,85,105,1) 0%, rgba(70,85,105,1) 28%, rgba(232,228,223,1) 100%); /* safari5.1+,chrome10+ */
+	//background: -o-linear-gradient(45deg, rgba(70,85,105,1) 0%, rgba(70,85,105,1) 28%, rgba(232,228,223,1) 100%); /* opera 11.10+ */
+	//background: -ms-linear-gradient(45deg, rgba(70,85,105,1) 0%, rgba(70,85,105,1) 28%, rgba(232,228,223,1) 100%); /* ie10+ */
+	//background: linear-gradient(45deg, rgba(70,85,105,1) 0%, rgba(70,85,105,1) 28%, rgba(232,228,223,1) 100%); /* w3c */
+	background-color: $bg-color-main;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E8E4DF', endColorstr='#465569',GradientType=1 ); /* ie6-9 */
 }
 
@@ -139,6 +140,7 @@ h4, h5, h6, .h4, .h5, .h6 {
 			-webkit-border-radius: 150px;
 			-moz-border-radius: 150px;
 			border-radius: 150px;
+			z-index: 5;
 			img {
 				width: 	90px;
 				margin-left: -45px;

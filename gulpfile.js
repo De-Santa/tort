@@ -41,6 +41,7 @@ gulp.task('scripts', function() {
 		'./app/libs/packery/dist/packery.pkgd.min.js',
 		'./app/libs/slick-carousel/slick.min.js',
 		'./app/libs/jquery-slimscroll/jquery.slimscroll.min.js',		
+		'./app/libs/ezdz/jquery.ezdz.min.js',		
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js

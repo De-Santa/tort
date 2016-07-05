@@ -1,27 +1,21 @@
 $(document).ready(function() {
+
+  $('input[type="file"]').ezdz({
+    text: 'перетащите фото сюда',
+    validators: {
+        maxWidth:  5000,
+        maxHeight: 2000,
+        maxNumber: 6
+    }
+  });
+
   //MAIN MENU INIT
   $mMenuGrid = $('#jsMainMenu')
     $mMenuGrid.packery({
       itemSelector: '.packery-grid-item',
+      transitionDuration: '0.6s',
     });
-
-  $mMenuGrid.hide();
   //MAIN MENU SHOW-HIDE//
-  $mMenuBtn = $('#jsMenuBtn');
-  $mainMenu = $('#jsMainMenu');
-  
-  $mMenuBtn.on('click',function(){
-    if ($mMenuBtn.hasClass('active')){
-      $mMenuBtn.removeClass('active');
-      $mMenuGrid.hide();
-    }
-    else {
-      $mMenuBtn.addClass('active');
-      $mMenuGrid.show();     
-      $mMenuGrid.packery();
-    }
-  });
-
 
   //PORTFOLIO SLIDERS INIT
 	$('.portfolio-slider-left').slick({

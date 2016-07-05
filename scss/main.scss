@@ -1,171 +1,270 @@
 @import "_vars";
+@import "_fast-order";
 @import "bourbon";
 @import "app/libs/font-awesome/scss/font-awesome";
+@import "app/libs/ezdz/jquery.ezdz.min";
 
 //PACKERY
-.main-menu {
-	box-shadow: 0 0 10px rgba(0,0,0,0.3);
-	.packery-grid-item {
-		width: 25%;
-		height: 200px;
-  	border: 3px solid $tabs-color;;
-  	overflow: hidden;
-  	position: relative;
-  	cursor: pointer;
+.main-menu-wrapper {
+	background-color: $tabs-color;
+	.main-menu {
+		margin-bottom: 40px;
+		.packery-grid-item {
+			width: 285px;
+			height: 200px;
+	  	border: 3px solid $tabs-color;
+	  	overflow: hidden;
+	  	position: relative;
+	  	cursor: pointer;
+	  	transition: hover 1.5s ease;
 
-  	&:hover > .menu-item-image-wrapper {
-			&::before {
-				background-color: transparent;
-			}
-  	}
+	  	&:hover {
+				border: 3px solid #fff;
+	  	}
 
-  	&:hover img {
-			transform: scale(1.3);
-  	}  	
+	  	&:hover > .menu-item-image-wrapper {
+				&::before {
+					background-color: transparent;
+				}
+	  	}
 
-		.menu-item-image-wrapper {
-			position: relative;
-			width: 100%;
-			height: 100%;
-			&::before {
-				content: '';
+	  	&:hover img {
+				transform: scale(1.3);
+	  	}  	
+
+			.menu-item-image-wrapper {
+				position: relative;
 				width: 100%;
 				height: 100%;
-				background-color: rgba(70,85,105,0.4);
+				&::before {
+					content: '';
+					width: 100%;
+					height: 100%;
+					background-color: rgba(70,85,105,0.3);
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1;
+					transition: all 1s ease;
+	  		}
+				img {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					left: 0;
+					top: 0;
+					transition: all 7s;
+				}
+	  	}
+	  	.menu-item-content-wrapper {
 				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 1;
-				transition: all 1s ease;
-  		}
-			img {
-				position: absolute;
-				width: 100%;
 				height: 100%;
-				left: 0;
-				top: 0;
-				transition: all 7s;
-			}
-  	}
-  	.menu-item-content-wrapper {
-			position: absolute;
-			//width: 100%;
-			height: 100%;
-			z-index: 2;
+				z-index: 2;
 
-  		.menu-item-header {
-  			display: block;
-  			padding-left: 5px;
-  			padding-right: 15px;
-  			font-size: 30px;
-  			font-family: "CaviarDreamsBoldItalic";
-  			color: #fff;
-  			background-color: rgba(43,48,57,0.7);
-  		}
-  	}
+	  		.menu-item-header {
+	  			display: block;
+	  			padding-left: 5px;
+	  			padding-right: 15px;
+	  			font-size: 30px;
+	  			font-family: "CaviarDreamsBoldItalic";
+	  			color: #fff;
+	  			background-color: rgba(43,48,57,0.7);
+	  		}
+	  	}
+		}
+		.packery-grid-item--height2 {
+			height: 400px;
+		}
+		.packery-grid-item--width2 {
+			width: 570px;
+		}
 	}
-	.packery-grid-item--height2 {
-		height: 400px;
+	@media only screen and (max-width: 1199px) {
+		.main-menu {
+			.packery-grid-item {
+				height: 180px;
+				width: 235px;
+			}
+			.packery-grid-item--height2 {
+				height: 360px;
+			}
+			.packery-grid-item--width2 {
+				width: 470px;
+			}
+		}
+	}	
+
+	@media only screen and (max-width: 992px) {
+		.main-menu {
+			.packery-grid-item {
+				height: 130px;
+				width: 180px;
+			}
+			.packery-grid-item--height2 {
+				height: 260px;
+			}
+			.packery-grid-item--width2 {
+				width: 360px;
+			}
+			.menu-item-header {
+				font-size: 27px!important;
+			}
+		}
 	}
-	.packery-grid-item--width2 {
-		width: 50%;
+
+	@media only screen and (max-width: 767px) {
+		.main-menu {
+			.packery-grid-item {
+				height: 130px;
+				width: 25%;
+			}
+			.packery-grid-item--height2 {
+				height: 260px;
+			}
+			.packery-grid-item--width2 {
+				width: 50%;
+			}
+			.menu-item-header {
+				margin-top: 55px;
+				font-size: 25px!important;
+			}
+		}
+	}	
+
+	@media only screen and (max-width: 578px) {
+		.main-menu {
+			.packery-grid-item {
+				height: 140px;
+				width: 50%;
+			}
+			.packery-grid-item--height2 {
+				height: 280px;
+			}
+			.packery-grid-item--width2 {
+				width: 100%;
+			}
+			.menu-item-header {
+				font-size: 25px!important;
+			}
+		}
 	}
 }
 //PORTFOLIO
 .portfolio-section {
-	margin-bottom: 100px;
-	.portfolio-slider-left, .portfolio-slider-right {
-			position: relative;	
-			width: 100%;
-			.fa-caret-right, .fa-caret-left {
-				color: #fff;
+	.portfolio-wrapper {
+		background-color: $test-color-2;
+		padding-bottom: 50px;
+		.portfolio-header {
+			font-weight: bold;
+			font-family: "CaviarDreamsBoldItalic";
+			color: $tabs-color;
+			margin: 0;
+			padding: 21px 0 21px 10px; 
+		}
+		.portfolio-left-side, .portfolio-right-side {
+			background-color: $test-color-2;
+		.portfolio-slider-left, .portfolio-slider-right {
+				position: relative;	
+				width: 100%;
+				.fa-caret-right, .fa-caret-left {
+					color: #fff;
+					position: absolute;
+					top: 50%;
+					margin-top: -15px;
+					font-size: 30px;
+					cursor: pointer;
+					line-height: 30px;
+				}
+				.fa-caret-right {
+					margin-right: 10px;
+					right: 0%;
+				}			
+
+				.fa-caret-left {
+					margin-left: 10px;
+					z-index: 1;
+					left: 0%;
+				}
+
+			.portfolio-slide {
+				height: 370px;
+				width: 100%;
 				position: absolute;
-				top: 50%;
-				margin-top: -15px;
-				font-size: 30px;
-				cursor: pointer;
-				line-height: 30px;
+				&:focus {
+					outline: none;
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					background-color: rgba(70,85,105,0.2);
+				}
 			}
-			.fa-caret-right {
-				margin-right: 10px;
-				right: 0%;
-			}			
-
-			.fa-caret-left {
-				margin-left: 10px;
+			p {
+				color: #fff;
+			}
+			.portfolio-slide-descr {
+				padding: 0px 35px 10px 35px;
+				position: relative;
+				width: 100%;
+				height: 100%;
 				z-index: 1;
-				left: 0%;
+				overflow: hidden;
+				.portfolio-descr-text {
+					padding: 5px;
+					margin: 0;
+					text-align: justify;
+					background-color: rgba(43,48,57,0.6);
+				}
+				.big-descr-text {
+					padding-right: 10px;
+					padding-bottom: 0;
+				}
+				.slide-header {
+					position: relative;
+					margin: 0px 0px 20px -35px;
+					padding: 10px 20px 10px 10px;
+					background-color: rgba(70,85,105,0.9);
+					max-width: 50%;
+					max-height: 90px;
+					overflow: hidden;
+					line-height: 25px;
+					box-shadow: 0 0 10px rgba(0,0,0,0.5);
+				}
 			}
-
-		.portfolio-slide {
-			height: 370px;
-			width: 100%;
-			position: absolute;
-			&:focus {
-				outline: none;
-			}
-			&::after {
-				content: '';
+			img {
 				position: absolute;
 				top: 0;
 				left: 0;
-				height: 100%;
 				width: 100%;
-				background-color: rgba(70,85,105,0.4);
-			}
+				height: 100%;
+			}	
 		}
-		p {
-			color: #fff;
 		}
-		.portfolio-slide-descr {
-			padding: 0px 35px 10px 35px;
-			position: relative;
-			width: 100%;
-			height: 100%;
-			z-index: 1;
-			overflow: hidden;
-			.portfolio-descr-text {
-				padding: 5px;
-				margin: 0;
-				text-align: justify;
-				background-color: rgba(43,48,57,0.5);
-			}
-			.big-descr-text {
-				padding-right: 10px;
-				padding-bottom: 0;
-			}
-			.slide-header {
-				position: relative;
-				margin: 0px 0px 20px -35px;
-				padding: 10px 20px 10px 10px;
-				background-color: rgba(70,85,105,0.9);
-				max-width: 50%;
-				max-height: 90px;
-				overflow: hidden;
-				line-height: 25px;
-				box-shadow: 0 0 10px rgba(0,0,0,0.5);
-			}
-		}
-		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}	
-	}
-	.portfolio-slider-left-nav, .portfolio-slider-right-nav {
+		.portfolio-slider-left-nav, .portfolio-slider-right-nav {
 
-		.nav-slide {
-			height: 123px;
-			cursor: pointer;
-			&:focus {
-				//outline: none;
-			}
-			img {
-				width: 100%;
-				height: 100%;
-			}				
-		}	
+			.nav-slide {
+				height: 123px;
+				cursor: pointer;
+				border: $test-color-2 solid 5px;
+				&:focus { 
+					outline: none;
+				}
+				img {
+					width: 100%;
+					height: 100%;
+				}				
+			}	
+		}
 	}
+}
+
+.main-footer {
+	width: 100%;
+	background-color: #000000;
+	padding: 30px 0;
+	color: #fff;
 }
