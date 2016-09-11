@@ -26,7 +26,8 @@
 		<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
 
 		<!-- Load CSS Start -->
-		<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+        {% load static %}
+		<script>loadCSS( "{% static "css/main.min.css" %}", false, "all" );</script>
 		<!-- Load CSS End -->
 
 	</head>
@@ -84,7 +85,7 @@
 								<p class="packery-catalog-grid__item-content-header">Топиарии<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#topiariy-icon"></use></svg></p>
 					  	</div>
 					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
-								<img class="packery-catalog-grid__item-image-wrapper-item"src="img/source/originals/topiariy.jpg" alt="">
+								<img class="packery-catalog-grid__item-image-wrapper-item"src="{% static "img/source/originals/topiariy.jpg" %}" alt="">
 							</div>
 					  </div>
 
@@ -93,7 +94,7 @@
 								<p class="packery-catalog-grid__item-content-header">Весь каталог<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#topiariy-icon"></use></svg></p>
 					  	</div>
 					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
-								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/str-cake-3.jpg" alt="">
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="{% static "img/source/originals/str-cake-3.jpg" %}" alt="">
 							</div>
 					  </div>
 
@@ -102,7 +103,7 @@
 								<p class="packery-catalog-grid__item-content-header">Торты<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#cake-icon"></use></svg></p>
 					  	</div>
 					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
-								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/str-cake-2.jpg" alt="">
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="{% static "img/source/originals/str-cake-2.jpg" %}" alt="">
 							</div>
 					  </div>
 
@@ -111,7 +112,7 @@
 								<p class="packery-catalog-grid__item-content-header">Пирожные<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#lolipop-icon"></use></svg></p>
 					  	</div>
 					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
-								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/pavlova2.jpg" alt="">
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="{% static "img/source/originals/pavlova2.jpg" %}" alt="">
 							</div>
 					  </div>	
 
@@ -120,7 +121,7 @@
 								<p class="packery-catalog-grid__item-content-header">Магниты<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#lolipop-icon"></use></svg></p>
 					  	</div>
 					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
-								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/cofee-magnet.jpg" alt="">
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="{% static "img/source/originals/cofee-magnet.jpg" %}" alt="">
 							</div>
 					  </div>
 
@@ -129,7 +130,7 @@
 								<p class="packery-catalog-grid__item-content-header">Композиции<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#lolipop-icon"></use></svg></p>
 					  	</div>
 					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
-								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/sweets-lion.jpg" alt="">
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="{% static "img/source/originals/sweets-lion.jpg" %}" alt="">
 							</div>
 					  </div>
 
@@ -138,7 +139,7 @@
 								<p class="packery-catalog-grid__item-content-header">Капкейки<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#cupcake-icon"></use></svg></p>
 					  	</div>
 					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
-								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/cupcakes2.jpg" alt="">
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="{% static "img/source/originals/cupcakes2.jpg" %}" alt="">
 							</div>
 					  </div>
 
@@ -147,7 +148,7 @@
 								<p class="packery-catalog-grid__item-content-header">Пряники<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#pryanik-icon"></use></svg></p>
 					  	</div>
 					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
-								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/pryaniki.jpg" alt="">
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="{% static "img/source/originals/pryaniki.jpg" %}" alt="">
 							</div>
 						</div>
 					</div>
@@ -193,7 +194,7 @@
 										<p class="h2 slide-header">Кофейные магниты</p>
 										<p class="portfolio-descr-text big-descr-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Напоивший парадигматическая если речью, деревни океана жаренные, проектах но маленькая текста рукопись его языкового одна они строчка! Эта все первую текст грамматики дал над наш заголовок образ взобравшись но однажды, встретил за меня большой пустился напоивший его власти, маленький подпоясал букв курсивных! Текст страна запятых маленький то встретил рекламных, приставка грамматики раз не меня о послушавшись океана безопасную алфавит продолжил предложения, напоивший залетают взгляд сих рыбными они? Предупреждал, текстами которой! Но текст безорфографичный заманивший курсивных диких силуэт всеми текста lorem великий пояс залетают, повстречался текстов до коварный живет меня, страна если продолжил, выйти они лучше обеспечивает! Меня букв деревни свое маленький предупреждал, продолжил рыбного назад свой взобравшись, власти города если.</p>
 									</div>
-									<img src="img/slider/cofee-magnet.jpg" alt="">
+									<img src=" {% static "img/slider/cofee-magnet.jpg" %}" alt="">
 								</div>
 
 								<div class="portfolio-slide">
@@ -201,23 +202,23 @@
 										<p class="h2 slide-header">Кофейное дерево</p>
 										<p class="portfolio-descr-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Напоивший парадигматическая если речью, деревни океана жаренные, проектах но маленькая текста рукопись его языкового одна они строчка! Эта все первую текст грамматики дал над наш заголовок образ взобравшись но однажды, встретил за меня большой пустился напоивший его власти, маленький подпоясал букв курсивных!.</p>
 									</div>
-									<img src="img/slider/cofee-tree.jpg" alt="">
+									<img src="{% static "img/slider/cofee-tree.jpg" %}" alt="">
 								</div>
 
 								<div class="portfolio-slide">
-									<img src="img/slider/march-magnet.jpg" alt="">
+									<img src="{% static "img/slider/march-magnet.jpg" %}" alt="">
 								</div>
 							</div>
 							
 							<div class="portfolio-slider-left-nav hidden-sm hidden-xs">
 								<div class="nav-slide">
-									<img src="img/slider/cofee-magnet.jpg" alt="">
+									<img src="{% static "img/slider/cofee-magnet.jpg" %}" alt="">
 								</div>
 								<div class="nav-slide">
-									<img src="img/slider/cofee-tree.jpg" alt="">
+									<img src="{% static "img/slider/cofee-tree.jpg" %}" alt="">
 								</div>
 								<div class="nav-slide">
-									<img src="img/slider/march-magnet.jpg" alt="">
+									<img src="{% static "img/slider/march-magnet.jpg" %}" alt="">
 								</div>
 							</div>
 						</div>
@@ -229,7 +230,7 @@
 										<p class="h2 slide-header">Капкейки, тест на переполнение раз раз раз раз раз Капкейки, тест на переполнение раз раз раз раз раз</p>
 										<p class="portfolio-descr-text">А вот и призовые капкейки для одного из победителей моего розыгрыша) Нежнейшие ванильные капкейки с вареной сгущенкой и кремом чиз! </p>
 									</div>
-									<img src="img/slider/cupcake.jpg" alt="">
+									<img src="{% static "img/slider/cupcake.jpg" %}" alt="">
 								</div>
 								<div class="portfolio-slide">
 									<div class="portfolio-slide-descr">
@@ -237,14 +238,14 @@
 										<p class="portfolio-descr-text">Клубничный тортик! 
 										влажный, сочный и нежный бисквит, крем чиз и свежая клубника в прослойке, украшен клубникой и жимолостью </p>
 									</div>
-									<img src="img/slider/str-cake-3.jpg" alt=""></div>
-								<div class="portfolio-slide"><img src="img/slider/rafaello-basket.jpg" alt=""></div>
+									<img src="{% static "img/slider/str-cake-3.jpg" %}" alt=""></div>
+								<div class="portfolio-slide"><img src="{% static "img/slider/rafaello-basket.jpg" %}" alt=""></div>
 							</div>
 
 							<div class="portfolio-slider-right-nav hidden-sm hidden-xs">
-								<div class="nav-slide"><img src="img/slider/cupcake.jpg" alt=""></div>
-								<div class="nav-slide"><img src="img/slider/str-cake-3.jpg" alt=""></div>
-								<div class="nav-slide"><img src="img/slider/rafaello-basket.jpg" alt=""></div>
+								<div class="nav-slide"><img src="{% static "img/slider/cupcake.jpg" %}" alt=""></div>
+								<div class="nav-slide"><img src="{% static "img/slider/str-cake-3.jpg" %}" alt=""></div>
+								<div class="nav-slide"><img src="{% static "img/slider/rafaello-basket.jpg" %}" alt=""></div>
 							</div>
 						</div>
 
@@ -261,8 +262,8 @@
 
 		<!-- Load Scripts Start -->
 		<script>var scr = {"scripts":[
-			{"src" : "js/libs.js", "async" : false},
-			{"src" : "js/common.js", "async" : false}
+			{"src" : "{% static "js/libs.js" %}", "async" : false},
+			{"src" : "{% static "js/common.js" %}", "async" : false}
 			]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
 		</script>
 		<!-- Load Scripts End -->
