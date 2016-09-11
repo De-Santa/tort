@@ -26,112 +26,165 @@
 		<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
 
 		<!-- Load CSS Start -->
-		<script>loadCSS( "css/header.min.css?ver=1.0.0", false, "all" );</script>
 		<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
 		<!-- Load CSS End -->
 
 	</head>
 	<body>
+		<div class="color-pallete">
+			<div class="color-pallete__color-1"></div>
+			<div class="color-pallete__color-2"></div>
+			<div class="color-pallete__color-3"></div>
+			<div class="color-pallete__color-4"></div>
+			<div class="color-pallete__color-5"></div>
+		</div>
+	<!-- HEADER -->
 		<header class="main-header">
-			<nav class="top-line">
-				<div class="row">
-					<div class="col-md-5 col-sm-5 hidden-xs">
-						<ul class="left-menu">
-							<li><a href="#">Акции</a></li>
-							<li><a href="#">Новости</a></li>
-							<li><a href="#">Отзывы</a></li>
-						</ul>
+		<div class="wave-separator-top"></div>
+			<div class="container">
+				<div class="main-header__menu">
+					<div class="main-header__menu-left-side">
+						<a href="#" class="main-header__menu-left-side-link">Заказать подарок<svg class="main-header__menu-left-side-link-icon"><use xlink:href="#compositons-icon"></use></svg></a>
+						<a href="#" class="main-header__menu-left-side-link">Наши работы<svg class="main-header__menu-left-side-link-icon"><use xlink:href="#portfolio-icon"></use></svg></a>
+						<a href="#" class="main-header__menu-left-side-link">Отзывы<svg class="main-header__menu-left-side-link-icon"><use xlink:href="#reviews-icon"></use></svg></a>
 					</div>
-					<div class="col-md-2 col-sm-2 col-xs-12">
-						<div class="logo">
-							<img src="img/logo.png" alt="">
-						</div>
-					</div>
-					<div class="col-md-5 col-sm-5 hidden-xs">
-						<ul class="right-menu">
-							<li><a href="#">Заказ</a></li>
-							<li><a href="#">Контакты</a></li>
-							<li><a href="#">Оплата</a></li>
-						</ul>
+
+
+					<a href="#" class="main-logo">
+						<svg class="main-logo__icon"><use xlink:href="#logo"></use></svg>
+						<h2 class="main-logo__text">Мастерская Подарков Дарьи Даниленко</h2>
+					</a>
+
+
+					<div class="main-header__menu-right-side">
+						<a href="#" class="main-header__menu-right-side-link"><svg class="main-header__menu-right-side-link-icon"><use xlink:href="#contacts-icon"></use></svg>Контакты</a>
+						<a href="#" class="main-header__menu-right-side-link"><svg class="main-header__menu-right-side-link-icon"><use xlink:href="#delivery-icon"></use></svg>Доставка</a>
+						<a href="#" class="main-header__menu-right-side-link"><svg class="main-header__menu-right-side-link-icon"><use xlink:href="#news-icon"></use></svg>Акции / Новости</a>
 					</div>
 				</div>
-			</nav>
+			</div>
+			<div class="wave-separator-bottom"></div>
 		</header>
 
-		<div class="container main-menu-wrapper">
-			<div id="jsMainMenu" class="main-menu">
-			  <div class="packery-grid-item packery-grid-item--height2 hidden-xs">
-			  	<div class="menu-item-content-wrapper">
-						<p class="h4 menu-item-header">Топиарии</p>
-			  	</div>
-			  	<div class="menu-item-image-wrapper">		  	
-						<img src="img/source/originals/topiariy.jpg" alt="">
-					</div>
-			  </div>
-			  <div class="packery-grid-item packery-grid-item--width2 packery-grid-item--height2 grid-menu-catalog">
-			  	<div class="menu-item-content-wrapper">
-						<p class="h4 menu-item-header">Весь каталог</p>
-			  	</div>
-			  	<div class="menu-item-image-wrapper">		  	
-						<img src="img/source/originals/str-cake-3.jpg" alt="">
-					</div>
-			  </div>
-			  <div class="packery-grid-item">
-			  	<div class="menu-item-content-wrapper">
-						<p class="h4 menu-item-header">Торты</p>
-			  	</div>
-			  	<div class="menu-item-image-wrapper">		  	
-						<img src="img/source/originals/str-cake-2.jpg" alt="">
-					</div>
-			  </div>
-			  <div class="packery-grid-item hidden-xs">
-			  	<div class="menu-item-content-wrapper">
-						<p class="h4 menu-item-header">Пирожные</p>
-			  	</div>
-			  	<div class="menu-item-image-wrapper">		  	
-						<img src="img/source/originals/pavlova2.jpg" alt="">
-					</div>
-			  </div>	  
-			  <div class="packery-grid-item">
-			  	<div class="menu-item-content-wrapper">
-						<p class="h4 menu-item-header">Магниты</p>
-			  	</div>
-			  	<div class="menu-item-image-wrapper">		  	
-						<img src="img/source/originals/cofee-magnet.jpg" alt="">
-					</div>
-			  </div>
-			  <div class="packery-grid-item hidden-xs">
-			  	<div class="menu-item-content-wrapper">
-						<p class="h4 menu-item-header">Композиции</p>
-			  	</div>
-			  	<div class="menu-item-image-wrapper">		  	
-						<img src="img/source/originals/sweets-lion.jpg" alt="">
-					</div>
-			  </div>
-			  <div class="packery-grid-item">
-			  	<div class="menu-item-content-wrapper">
-						<p class="h4 menu-item-header">Капкейки</p>
-			  	</div>
-			  	<div class="menu-item-image-wrapper">		  	
-						<img src="img/source/originals/cupcakes2.jpg" alt="">
-					</div>
-			  </div>
-			  <div class="packery-grid-item">
-			  	<div class="menu-item-content-wrapper">
-						<p class="h4 menu-item-header">Пряники</p>
-			  	</div>
-			  	<div class="menu-item-image-wrapper">		  	
-						<img src="img/source/originals/pryaniki.jpg" alt="">
-					</div>
-			  </div>
-			</div>
-		</div>
 
+		<article class="main-navigation">
+			<h1 class="main-navigation__slogan-header">Мы изготавливаем креативные подарки. Мы дарим Вам эмоции!</h1>
+			<div class="container">		
+				<div id="tabs" class="main-navigation__tabs">
+					<ul>
+						<li><a href="#jsPackeryCatalog" class="main-navigation__tabs-button main-navigation__tabs-button--active">Каталог подарков</a></li>
+						<li><a href="#fast-order-form" class="main-navigation__tabs-button">Быстрый заказ</a></li>
+					</ul>
+
+					<!-- PACKERY CATALOG -->		
+					<div id="jsPackeryCatalog" class="packery-catalog-grid">
+
+					  <div class="packery-catalog-grid__item packery-catalog-grid__item--height2 hidden-xs">
+					  	<div class="packery-catalog-grid__item-content">
+								<p class="packery-catalog-grid__item-content-header">Топиарии<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#topiariy-icon"></use></svg></p>
+					  	</div>
+					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
+								<img class="packery-catalog-grid__item-image-wrapper-item"src="img/source/originals/topiariy.jpg" alt="">
+							</div>
+					  </div>
+
+					  <div class="packery-catalog-grid__item packery-catalog-grid__item--width2 packery-catalog-grid__item--height2">
+					  	<div class="packery-catalog-grid__item-content">
+								<p class="packery-catalog-grid__item-content-header">Весь каталог<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#topiariy-icon"></use></svg></p>
+					  	</div>
+					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/str-cake-3.jpg" alt="">
+							</div>
+					  </div>
+
+					  <div class="packery-catalog-grid__item">
+					  	<div class="packery-catalog-grid__item-content">
+								<p class="packery-catalog-grid__item-content-header">Торты<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#cake-icon"></use></svg></p>
+					  	</div>
+					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/str-cake-2.jpg" alt="">
+							</div>
+					  </div>
+
+					  <div class="packery-catalog-grid__item hidden-xs">
+					  	<div class="packery-catalog-grid__item-content">
+								<p class="packery-catalog-grid__item-content-header">Пирожные<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#lolipop-icon"></use></svg></p>
+					  	</div>
+					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/pavlova2.jpg" alt="">
+							</div>
+					  </div>	
+
+					  <div class="packery-catalog-grid__item">
+					  	<div class="packery-catalog-grid__item-content">
+								<p class="packery-catalog-grid__item-content-header">Магниты<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#lolipop-icon"></use></svg></p>
+					  	</div>
+					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/cofee-magnet.jpg" alt="">
+							</div>
+					  </div>
+
+					  <div class="packery-catalog-grid__item hidden-xs">
+					  	<div class="packery-catalog-grid__item-content">
+								<p class="packery-catalog-grid__item-content-header">Композиции<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#lolipop-icon"></use></svg></p>
+					  	</div>
+					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/sweets-lion.jpg" alt="">
+							</div>
+					  </div>
+
+					  <div class="packery-catalog-grid__item">
+					  	<div class="packery-catalog-grid__item-content">
+								<p class="packery-catalog-grid__item-content-header">Капкейки<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#cupcake-icon"></use></svg></p>
+					  	</div>
+					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/cupcakes2.jpg" alt="">
+							</div>
+					  </div>
+
+					  <div class="packery-catalog-grid__item">
+					  	<div class="packery-catalog-grid__item-content">
+								<p class="packery-catalog-grid__item-content-header">Пряники<svg class="packery-catalog-grid__item-content-header-icon"><use xlink:href="#pryanik-icon"></use></svg></p>
+					  	</div>
+					  	<div class="packery-catalog-grid__item-image-wrapper">		  	
+								<img class="packery-catalog-grid__item-image-wrapper-item" src="img/source/originals/pryaniki.jpg" alt="">
+							</div>
+						</div>
+					</div>
+
+					<!-- FAST ORDER -->	
+					<article id="fast-order-form" class="fast-order container">
+						<h1 class="fast-order__header">Быстрый заказ</h1>
+						<form action="" class="fast-order__form">
+						<div class="row">
+							<p class="fast-order__input-header col-md-6">Ваше имя:
+								<input type="text" class="fast-order__input" required="true" placeholder="Введите Ваше имя">
+							</p>			
+							<p class="fast-order__input-header col-md-6">Ваш телефон:
+								<input type="tel" class="fast-order__input" required="true" placeholder="+7 XXX XXX XX XX">
+							</p>
+						</div>
+						<div class="row">
+							<p class="fast-order__input-header col-md-6"> Пришлите нам набросок или фотографию с примером оформления
+								<input type="file" class="previewImage fast-order__input">
+							</p>			
+							<p class="fast-order__input-header col-md-6"> Поле для пожеланий
+			​					<textarea class="fast-order__input fast-order__input--text"></textarea>
+							</p>			
+						</div>
+						</form>
+					</article>
+				</div>
+			</div>
+		</article>
+
+<!-- LAST-WORKS -->	
 		<section class="portfolio-section">
 			<div class="container portfolio-wrapper">
 				<h1 class="portfolio-header">Последние работы</h1>
 					<div class="row">
-						<div class="col-md-6 col-sm-6 portfolio-left-side"> <!--PORTFOLIO LEFT SIDE WRAPPER -->
+						<div class="col-md-6 col-sm-6 portfolio-left-side"> 
+						<!--PORTFOLIO LEFT SIDE WRAPPER -->
 								
 							<div class="portfolio-slider-left">
 								
@@ -200,35 +253,9 @@
 			</div>
 		</section>
 
-		<article class="fast-order container">
-			<h1 class="fast-order__header">Быстрый заказ</h1>
-			<form action="" class="fast-order__form">
-			<div class="row">
-				<p class="fast-order__input-header col-md-6">Ваше имя:
-					<input type="text" class="fast-order__input" required="true" placeholder="Введите Ваше имя">
-				</p>			
-				<p class="fast-order__input-header col-md-6">Ваш телефон:
-					<input type="tel" class="fast-order__input" required="true" placeholder="+7 XXX XXX XX XX">
-				</p>
-			</div>
-			<div class="row">
-				<p class="fast-order__input-header col-md-6"> Пришлите нам набросок или фотографию с примером оформления
-					<input type="file" class="previewImage fast-order__input">
-				</p>			
-				<p class="fast-order__input-header col-md-6"> Поле для пожеланий
-​					<textarea class="fast-order__input fast-order__input--text"></textarea>
-				</p>			
-			</div>
-			</form>
-		</article>
-
 		<footer class="main-footer">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-4">234</div>
-					<div class="col-md-4">34</div>
-					<div class="col-md-4">4444</div>
-				</div>
+				<div class="icecream-bg"><svg><use xlink:href="#cake-icon"></use></svg></div>
 			</div>
 		</footer>
 

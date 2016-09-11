@@ -1,16 +1,17 @@
 .fast-order {
-	background-color: $tabs-color;
 	padding-bottom: 15px;
+	background-color: $bg-color-sec;
+	margin-bottom: 30px;
+	font-family: "KelsonSansRegular";
+	color: $tabs-color; 
 	&__header {
 		font-weight: bold;
-		font-family: "CaviarDreamsBoldItalic";
-		color: #fff;
+		font-family: "KelsonSansBold";
 		margin: 0;
 		padding: 21px 0 21px 10px;
 		}
 	&__form {
 		.fast-order__input-header {
-			color: #fff;
 			margin-bottom: 15px;
 			.fast-order__input {
 				margin-top: 15px;
@@ -24,7 +25,6 @@
 			.ezdz-dropzone {
 				width: 100%;
 				border: 4px dotted #fff;
-				color: #fff;
 				margin-top: 15px;
 			}
 		}

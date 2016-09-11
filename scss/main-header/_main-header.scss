@@ -1,0 +1,106 @@
+@import "bourbon";
+
+.main-header {
+	margin-top: 90px;
+	margin-bottom: 70px;
+	padding: 40px 0; 
+	background-color: #fff;
+	position: relative;
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		//MAIN-HEADER-SIDES COMMON-STYLES START
+		&-left-side, &-right-side {
+			display: flex;
+			justify-content: space-between;
+			&-link {
+				vertical-align: middle;
+				padding: 0;
+				font-size: 15px;
+				font-family: "KelsonSansLight";
+				color: $tabs-color;
+				text-transform: uppercase;
+				font-weight: bold;
+				position: relative;
+				transition: all .5s ease;
+				&:hover {
+					text-decoration: none;
+					color: $accent-color;
+				}
+				&-icon {
+					vertical-align: middle;
+					fill: currentColor;
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+		//MAIN-HEADER-SIDES COMMON-STYLES END
+
+		&-left-side {
+			&-link {
+				margin-right: 26px; //на глаз подровнял левый блок меню
+				&:nth-last-child(1) {
+					margin-right: 0;
+				}
+				&-icon {
+					padding-left: 5px;
+				}
+			}
+		}
+		.main-logo {
+			width: 270px;
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: -112px;
+			z-index: 999;
+			margin-left: -135px;
+			border-radius: 135px;
+			transition: all .5s ease;
+			background-color: $bg-color-main;
+			&__icon {
+				margin-top: 8px;
+				display: block;
+				width: 150px;
+				height: 150px;
+				margin: 0 auto;
+				fill: $tabs-color;
+				transition: all .5s ease;
+			}
+			&__text {
+				font-size: 18px;
+				padding: 10px 20px 20px 20px;
+				font-family: "KelsonSansRegular";
+				text-align: center;
+				color: $tabs-color;
+				transition: all .5s ease;
+			}
+			&:hover {
+				text-decoration: none;
+			}
+			&:hover > .main-logo__icon {
+				//transform: rotate(360deg);
+				fill: $accent-color;
+			}			
+
+			&:hover > .main-logo__text {
+				color: $accent-color;
+			}
+		}
+		&-right-side {
+			text-align: right;
+			&-link {
+				margin-left: 30px;
+				&:nth-child(1) {
+					margin-left: 0;
+				}
+				&-icon {
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+}
