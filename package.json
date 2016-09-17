@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "tort_project",
+=======
+  "name": "start_template",
+>>>>>>> origin/master
   "version": "1.0.0",
   "description": "Topalov start project SCSS",
   "author": "German Topalov",
@@ -13,7 +17,11 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.5.3",
+<<<<<<< HEAD
     "node-bourbon": "^4.2.3",
     "gulp-autoprefixer": "^3.1.0"
+=======
+    "node-bourbon": "^4.2.3"
+>>>>>>> origin/master
   }
 }
