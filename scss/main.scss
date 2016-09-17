@@ -1,4 +1,229 @@
 @import "_vars";
+<<<<<<< HEAD
+@import "_fast-order";
+@import "main-header/_main-header";
+@import "catalog-packery/_catalog-packery";
+@import "main-navigation/_main-navigation";
+@import "_fonts";
+@import "bourbon";
+@import "app/libs/slick-carousel/slick";
+@import "app/libs/font-awesome/scss/font-awesome";
+@import "app/libs/ezdz/jquery.ezdz.min";
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	background-color: $bg-color-main;
+	position: relative;
+	line-height: 1.4;
+	//font-family: "CaviarDreamsRegular", sans-serif;
+	overflow-x: hidden;
+}
+a {
+	&:active, &:focus {
+		text-decoration: none;
+		outline: none;
+	}
+}
+.color-pallete {
+	position: fixed;
+	top: 0;
+	left: 0;
+	&__color-1, &__color-2, &__color-3, &__color-4, &__color-5 {
+		width: 40px;
+		height: 40px;
+		border: 2px solid black;
+	}
+	&__color-1 {
+		background-color: $bg-color-main;
+	}
+	&__color-2 {
+		background-color: $bg-color-sec;
+	}
+	&__color-3 {
+		background-color: $tabs-color;
+	}
+	&__color-4 {
+		background-color: $accent-color;
+	}
+	&__color-5 {
+		background-color: $test-color;
+	}
+}
+//BUTTONS
+.main-button {
+	text-align: center;
+	background: $tabs-color;
+	border-radius: 15px;
+	padding: 10px 20px;
+	display: inline-block;
+	font-family: "KelsonSansRegular";
+	font-weight: bold;
+	color: $bg-color-main;
+	text-decoration: none;
+	border:2px solid $bg-color-main;
+	cursor: pointer;
+	width: 175px;
+	box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+	z-index: 1;
+	position: relative;
+	&:hover{
+    box-shadow: 0px 2px 1px white inset, 0px -2px 20px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+	}
+	&:active{
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px white, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+		background:-webkit-linear-gradient(top, $tabs-color 0%,$test-color 100%);
+	}
+}
+//SEPARATORS
+.wave-separator-top, .wave-separator-bottom {
+	height: 9px;
+	width: 100%;
+	background-color: transparent;
+	background: url("/img/bg-wave.png") repeat-x bottom;
+	position: absolute;
+}
+
+.wave-separator-top {
+	top: -9px;
+	transform: rotate(180deg);
+}
+.wave-separator-bottom {
+	bottom: -9px;
+}
+
+//PORTFOLIO
+.portfolio-section {
+	.portfolio-wrapper {		
+		padding-bottom: 50px;
+		.portfolio-header {
+			background-color: $test-color;
+			font-weight: bold;
+			font-family: "CaviarDreamsBoldItalic";
+			color: $tabs-color;
+			margin: 0;
+			padding: 21px 0 21px 10px; 
+		}
+		.portfolio-left-side, .portfolio-right-side {
+		.portfolio-slider-left, .portfolio-slider-right {
+				position: relative;	
+				width: 100%;
+				.fa-caret-right, .fa-caret-left {
+					color: #fff;
+					position: absolute;
+					top: 50%;
+					margin-top: -15px;
+					font-size: 30px;
+					cursor: pointer;
+					line-height: 30px;
+				}
+				.fa-caret-right {
+					margin-right: 10px;
+					right: 0%;
+				}			
+
+				.fa-caret-left {
+					margin-left: 10px;
+					z-index: 1;
+					left: 0%;
+				}
+
+			.portfolio-slide {
+				height: 370px;
+				width: 100%;
+				position: absolute;
+				&:focus {
+					outline: none;
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					background-color: rgba(70,85,105,0.2);
+				}
+			}
+			p {
+				color: #fff;
+			}
+			.portfolio-slide-descr {
+				padding: 0px 35px 10px 35px;
+				position: relative;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+				overflow: hidden;
+				.portfolio-descr-text {
+					padding: 5px;
+					margin: 0;
+					text-align: justify;
+					background-color: rgba(43,48,57,0.6);
+				}
+				.big-descr-text {
+					padding-right: 10px;
+					padding-bottom: 0;
+				}
+				.slide-header {
+					position: relative;
+					margin: 0px 0px 20px -35px;
+					padding: 10px 20px 10px 10px;
+					background-color: rgba(70,85,105,0.9);
+					max-width: 50%;
+					max-height: 90px;
+					overflow: hidden;
+					line-height: 25px;
+					box-shadow: 0 0 10px rgba(0,0,0,0.5);
+				}
+			}
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}	
+		}
+		}
+		.portfolio-slider-left-nav, .portfolio-slider-right-nav {
+
+			.nav-slide {
+				height: 123px;
+				cursor: pointer;
+				border: $test-color transparent 5px;
+				&:focus { 
+					outline: none;
+				}
+				img {
+					width: 100%;
+					height: 100%;
+				}				
+			}	
+		}
+	}
+}
+
+.main-footer {
+	width: 100%;
+	background-color: #849d8f;
+	padding: 30px 0;
+	color: #fff;
+	.icecream-bg {
+		background-image: url('/../img/glacy.png');
+		width: 971px;
+		height: 844px;
+		margin: 0 auto;
+		color: orange;
+		&:hover {
+			color: blue;
+		}
+		svg {
+			fill: currentColor;
+			width: 64px;
+			height: 64px;
+		}
+=======
 @import "bourbon";
 @import "app/libs/font-awesome/scss/font-awesome";
 
@@ -158,5 +383,6 @@
 				height: 100%;
 			}				
 		}	
+>>>>>>> origin/master
 	}
 }
