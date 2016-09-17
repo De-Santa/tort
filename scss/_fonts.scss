@@ -1,13 +1,7 @@
 @import "bourbon";
 
-@include font-face("CaviarDreamsRegular", "../fonts/CaviarDreamsRegular/CaviarDreamsRegular", $file-formats: eot woff ttf);
-@include font-face("CaviarDreamsItalic", "../fonts/CaviarDreamsItalic/CaviarDreamsItalic", $file-formats: eot woff ttf);
-@include font-face("CaviarDreamsBold", "../fonts/CaviarDreamsBold/CaviarDreamsBold", $file-formats: eot woff ttf);
-<<<<<<< HEAD
 @include font-face("CaviarDreamsBoldItalic", "../fonts/CaviarDreamsBoldItalic/CaviarDreamsBoldItalic", $file-formats: eot woff ttf);
 @include font-face("KelsonSansBold", "../fonts/KelsonSansBold/KelsonSansBold", $file-formats: eot woff ttf);
 @include font-face("KelsonSansLight", "../fonts/KelsonSansLight/KelsonSansLight", $file-formats: eot woff ttf);
 @include font-face("KelsonSansRegular", "../fonts/KelsonSansRegular/KelsonSansRegular", $file-formats: eot woff ttf);
-=======
-@include font-face("CaviarDreamsBoldItalic", "../fonts/CaviarDreamsBoldItalic/CaviarDreamsBoldItalic", $file-formats: eot woff ttf);
->>>>>>> origin/master
+
