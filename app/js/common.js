@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   $('input[type="file"]').ezdz({
     text: 'перетащите фото сюда',
     validators: {
@@ -8,7 +7,25 @@ $(document).ready(function() {
         maxNumber: 6
     }
   });
+  //WELCOME-SCREEN SLIDER INIT
+  $welcomeSlider = $('.welcome-screen__slider');
+  $welcomeSlider.slick ({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    dots: true,
+    customPaging: function(slider, i) {
+      return '<span class="dot"></span>';
+    },
+  });
 
+  //NEW-PRODUCTS SLIDER INIT
+  $newProductsSlider = $('.new-products__slider');
+  $newProductsSlider.slick ({
+    slidesToShow: 4,
+    slidesToScroll: 4,
+  });
   //TABS INIT
   $( "#tabs" ).tabs({
     active: 0
@@ -21,48 +38,7 @@ $(document).ready(function() {
       transitionDuration: '0.6s',
     });
 
-  //PORTFOLIO SLIDERS INIT
-	$('.portfolio-slider-left').slick({
-  	infinite: true,
-  	slidesToShow: 1,
-  	fade: true,
-		cssEase: 'linear',
-    nextArrow: '<i class="fa fa-caret-right"></i>',
-    prevArrow: '<i class="fa fa-caret-left"></i>',
-  	asNavFor: '.portfolio-slider-left-nav, .portfolio-slider-left-text',
-	});	
-
-	$('.portfolio-slider-left-nav').slick({
-  	infinite: true,
-  	slidesToShow: 3,
-  	focusOnSelect: true,
-    arrows: false,
-  	asNavFor: '.portfolio-slider-left, .portfolio-slider-left-text',
-	});
-
-	$('.portfolio-slider-right').slick({
-  	infinite: true,
-  	slidesToShow: 1,
-		fade: true,
-		cssEase: 'linear',
-    nextArrow: '<i class="fa fa-caret-right"></i>',
-    prevArrow: '<i class="fa fa-caret-left"></i>',
-  	asNavFor: '.portfolio-slider-right-nav,.portfolio-slider-right-text',
-	});
-	$('.portfolio-slider-right-nav').slick({
-  	infinite: true,
-    arrows: false,
-  	slidesToShow: 3,
-  	focusOnSelect: true,
-  	asNavFor: '.portfolio-slider-right,.portfolio-slider-right-text',
-	});
-
-  $('.big-descr-text').slimScroll({
-        height: '272px',
-        touchScrollStep: 50,
-  });
-
-//SVG-SPRITES IN LOCALSTORAGE
+  //SVG-SPRITES IN LOCALSTORAGE
   function spriteCache( window, document ){
     'use strict';
 

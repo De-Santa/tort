@@ -46,9 +46,10 @@ gulp.task('scripts', function() {
 		'./app/libs/jquery-slimscroll/jquery.slimscroll.min.js',		
 		'./app/libs/ezdz/jquery.ezdz.min.js',		
 		'./app/libs/jquery-ui/jquery-ui.min.js',		
+		'./app/libs/dots/dots.js',	
 		])
 		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
+		//.pipe(uglify()) //Minify libs.js
 		.pipe(gulp.dest('./app/js/'));
 });
 

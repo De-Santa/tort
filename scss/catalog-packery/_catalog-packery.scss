@@ -3,7 +3,8 @@
 	z-index: 1;
 	margin-bottom: 40px;
 	&__item {
-		width: 285px;
+		box-sizing: border-box;
+		width: 300px;
 		height: 200px;
   	border: 2px solid $bg-color-sec;
   	overflow: hidden;
@@ -34,15 +35,16 @@
   			position: relative;
   			padding: 5px 15px 5px 5px;
   			font-size: 30px;
-  			font-family: "KelsonSansLight";
-  			color: $tabs-color;
+  			font-family: "lobster";
+  			font-weight: normal;
+  			color: $bg-color-main;
   			background-color: rgba($bg-color-sec,0.9);
   			transition: all 1s ease;
   			&-icon {
   				vertical-align: middle;
   				width: 50px;
   				height: 50px;
-  				fill: currentColor;
+  				fill: $bg-color-main;
   				padding-left: 5px;
   			}
   		}
@@ -77,19 +79,19 @@
 		height: 400px;
 	}
 	&__item--width2 {
-		width: 570px;
+		width: 600px;
 	}
 }
 @media only screen and (max-width: 1199px) {
-	.main-menu {
-		.packery-grid-item {
+	.packery-catalog-grid {
+		&__item {
 			height: 180px;
 			width: 235px;
 		}
-		.packery-grid-item--height2 {
+		&__item--height2 {
 			height: 360px;
 		}
-		.packery-grid-item--width2 {
+		&__item--width2 {
 			width: 470px;
 		}
 	}
