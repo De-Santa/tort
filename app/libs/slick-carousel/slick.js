@@ -2451,7 +2451,7 @@
 
         }
 
-        _.updateDots();
+        _.updateDots(oldSlide);
         _.updateArrows();
 
         if (_.options.fade === true) {
@@ -2831,23 +2831,23 @@
 
     };
 
-    Slick.prototype.updateDots = function() {
+    Slick.prototype.updateDots = function(oldSlide) {
 
         var _ = this;
 
         if (_.$dots !== null) {
+            var classes = (oldSlide > _.currentSlide) ? 'slick-active from-right' : 'slick-active';
 
             _.$dots
                 .find('li')
-                .removeClass('slick-active')
+                .removeClass('slick-active from-right')
                 .attr('aria-hidden', 'true');
 
             _.$dots
                 .find('li')
                 .eq(Math.floor(_.currentSlide / _.options.slidesToScroll))
-                .addClass('slick-active')
+                .addClass(classes)
                 .attr('aria-hidden', 'false');
-
         }
 
     };

@@ -48,6 +48,18 @@
 					}					
 				}
 			}
+			li.from-right {
+				.dot {
+					&::after {
+						-webkit-transition: none;
+						transition: none;
+						-webkit-transform: rotate(100deg);
+						transform: rotate(100deg);
+						-webkit-transform-origin: 300% 50%;
+						transform-origin: 300% 50%;
+					}
+				}
+			}
 			li.slick-active {
 				.dot {
 					&::after {
@@ -59,18 +71,6 @@
 						transition: transform 0.3s ease, opacity 0.3s ease;
 					}
 	 			}
-			}
-			li.current-from-right {
-				.dot {
-					&::after {
-						-webkit-transition: none;
-						transition: none;
-						-webkit-transform: rotate(100deg);
-						transform: rotate(100deg);
-						-webkit-transform-origin: 300% 50%;
-						transform-origin: 300% 50%;
-					}
-				}
 			}
 		}
 		//SLIDER DOTS STYLES FINISH
