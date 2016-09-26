@@ -8,6 +8,7 @@ var imagemin 		  = require('gulp-imagemin');
 var concat        = require('gulp-concat');
 var svgSprite     = require('gulp-svg-sprite');
 var	cheerio 			= require('gulp-cheerio');
+var uglify 				= require('gulp-uglify');
 
 
 gulp.task('browser-sync', ['scss', 'scripts'], function() {
@@ -42,14 +43,14 @@ gulp.task('scripts', function() {
 		'./app/libs/jquery/jquery.min.js',
 		'./app/libs/imagesloaded/imagesloaded.pkgd.min.js',
 		'./app/libs/packery/dist/packery.pkgd.min.js',
-		'./app/libs/slick-carousel/slick.min.js',
+		'./app/libs/dots/dots.js',
+		'./app/libs/slick-carousel/slick.js',
 		'./app/libs/jquery-slimscroll/jquery.slimscroll.min.js',		
 		'./app/libs/ezdz/jquery.ezdz.min.js',		
 		'./app/libs/jquery-ui/jquery-ui.min.js',		
-		'./app/libs/dots/dots.js',	
 		])
 		.pipe(concat('libs.js'))
-		//.pipe(uglify()) //Minify libs.js
+		.pipe(uglify()) //Minify libs.js
 		.pipe(gulp.dest('./app/js/'));
 });
 
