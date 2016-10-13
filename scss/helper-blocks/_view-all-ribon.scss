@@ -1,0 +1,16 @@
+.view-all-ribbon {
+	margin: 0 auto;
+	width: 242px;
+	height: 38px;
+	background-image: url('../img/label-pink.png');
+	text-align: center;
+	&__link {
+		display: block;
+		padding-top: 7px;
+		color: $bg-color-main;
+		transition: all .5s ease;
+		&:hover {
+			color: $bg-color-sec;
+		}
+	}
+}

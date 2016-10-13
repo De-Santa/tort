@@ -10,6 +10,8 @@ $(document).ready(function() {
   //WELCOME-SCREEN SLIDER INIT
   $welcomeSlider = $('.welcome-screen__slider');
   $welcomeSlider.slick ({
+    //autoplay: true,
+    //autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
@@ -25,6 +27,8 @@ $(document).ready(function() {
   $newProductsSlider.slick ({
     slidesToShow: 4,
     slidesToScroll: 4,
+    nextArrow: '<svg class="new-products__slider-next-arrow"><use xlink:href="#slider-left-arrow"></use></svg>',
+    prevArrow: '<svg class="new-products__slider-prev-arrow"><use xlink:href="#slider-right-arrow"></use></svg>',
   });
   //TABS INIT
   $( "#tabs" ).tabs({
@@ -43,7 +47,7 @@ $(document).ready(function() {
     'use strict';
 
     var file     = 'img/icons-sprite.html',
-      revision = 5;
+      revision = 6;
 
     if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
       return true;

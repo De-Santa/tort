@@ -1,0 +1,42 @@
+.new-products {
+	padding: 20px 0;
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		top: -11px;
+		width: 100%;
+		height: 11px;
+		display: block;
+		background: transparent url("/img/divider-light.png") repeat-x center center;
+	}
+	&__slider {
+		position: relative;
+		padding-top: 80px;
+		margin-bottom: 30px;
+		&-next-arrow, &-prev-arrow {
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			top: 0px;
+			cursor: pointer;
+			transition: all .5s ease;
+			fill: $bg-color-sec;
+			&:hover {
+				fill: $tabs-color;
+			}
+		}
+		&-next-arrow {
+			left: 45%;
+			margin-left: -27px;
+		}
+		&-prev-arrow {
+			right: 45%;
+			margin-right: -27px;
+		}
+		&-slide {
+			position: relative;
+			padding: 0 15px;
+		}
+	}
+}

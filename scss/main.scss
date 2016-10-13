@@ -8,17 +8,25 @@
 @import "app/libs/font-awesome/scss/font-awesome";
 @import "app/libs/ezdz/jquery.ezdz.min";
 
-//BEM BLOCKS IMPORT
-@import "catalog-packery/_catalog-packery";
-@import "main-navigation/_main-navigation";
-@import "blocks/welcome-screen/_welcome-screen";
-@import "blocks/main-menu/_main-menu";
-@import "blocks/main-logo/_main-logo";
-@import "blocks/section-header/_section-header";
-@import "blocks/new-products/_new-products";
-@import "blocks/product-card/_product-card";
-@import "_fast-order";
+//MAIN BLOCKS IMPORT
+@import "main-blocks/_main-header";
+@import "main-blocks/_main-logo";
+@import "main-blocks/_main-menu";
 
+//SECTION BLOCKS IMPORT
+@import "section-blocks/_catalog-order";
+@import "section-blocks/_new-products";
+@import "section-blocks/_welcome-screen";
+
+//COMPONENT BLOCKS IMPORT
+@import "component-blocks/_catalog-packery";
+@import "component-blocks/_product-card";
+@import "component-blocks/_fast-order";
+
+//HELPER BLOCKS IMPORT
+@import "helper-blocks/_section-title";
+@import "helper-blocks/_view-all-ribon";
+@import "helper-blocks/_navigation-tabs";
 
 
 body {
@@ -40,6 +48,12 @@ a {
 		outline: none;
 	}
 }
+//SLICK SLIDER OUTLINE RESET
+.slick-slide {
+	outline: none;
+}
+
+//CONTAINER LAYOUT SETTINGS
 .container {
 	width: 1200px;
 	//padding: 0 15px;
