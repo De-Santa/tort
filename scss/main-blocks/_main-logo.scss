@@ -1,50 +1,37 @@
 .main-logo {
 	display: block;
 	position: absolute;
-	background-image: url("/img/logo/star.png");
-	width: 152px;
-	height: 152px;
+	width: 165px;
+	height: 175px;
+	top: -116px;
 	left: 50%;
-	top: -55px;
-	z-index: 999;
 	margin-left: -76px;
+	z-index: 1;
 	transition: all .5s ease;
-	&__icon {
-		margin: 0 auto;
-		margin-top: 8px;
-		margin-bottom: 2px;
+	&::before {
+		content: '';
+		z-index: -1;
 		display: block;
-		width: 60px;
-		height: 60px;
-		fill: $bg-color-sec;
-		transition: all .5s ease;
+		position: absolute;
+		width: 165px;
+		height: 165px;
+		border-radius: 82.5px;
+		background-color: $bg-color-main;
 	}
-	&__text {
-		font-size: 17px;
-		font-family: "KelsonSansRegular";
-		text-align: center;
-		color: $bg-color-sec;
-		transition: all .5s ease;
-		&-top {
-			margin: 0;
-			padding: 0;
-			font-size: 13px;
-			margin-bottom: 1px;
-		}
-		&-bottom {
-			margin: 0;
-			padding: 0 10px;
+	&__icon {
+		z-index: 2;
+		margin: 0 auto;
+		margin-top: 10px;
+		display: block;
+		width: 170px;
+		height: 170px;
+		fill: $bg-color-sec;	
+		transition: all 1s ease;
+		&:hover {
+			fill: $tabs-color;
 		}
 	}
-	&:hover {
-		text-decoration: none;
-	}
-	&:hover > .main-logo__icon {
-		//transform: rotate(360deg);
+	&:hover > &__icon {
 		fill: $tabs-color;
-	}			
-
-	&:hover > .main-logo__text {
-		color: $tabs-color;
 	}
 }

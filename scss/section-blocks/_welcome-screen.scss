@@ -1,9 +1,18 @@
 .welcome-screen {
 	position: relative;
 	&__header {
-		margin-top: 40px;
+		margin-top: 70px;
 		position: absolute;
 		z-index: 1;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 3px;
+			top: 35%;
+			background-color: $bg-color-sec;
+		}
 	}
 	&__slider {
 		//SLIDER DOTS STYLES
@@ -73,7 +82,7 @@
 		//SLIDER DOTS STYLES FINISH
 
 		&-slide {
-			height: 700px;
+			height: 70vh;
 			position: relative;
 				&::before {
 				content: '';

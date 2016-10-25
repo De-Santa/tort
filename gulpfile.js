@@ -63,14 +63,14 @@ gulp.task('watch', function () {
 
 
 gulp.task('svg-sprites', function () {
-	return gulp.src('app/img/svg/*.svg')
-	.pipe(cheerio({
+	return gulp.src('app/img/svg-for-sprite/*.svg')
+	/*.pipe(cheerio({
 	run: function ($) {
 		$('[fill]').removeAttr('fill');
 		$('[style]').removeAttr('style');
 	},
 	parserOptions: { xmlMode: true }
-	}))
+	}))*/
 	.pipe(svgSprite({
 		mode: {
 			symbol: {

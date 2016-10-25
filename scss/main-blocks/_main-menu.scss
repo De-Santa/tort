@@ -5,8 +5,16 @@
 	position: relative;
 	//MAIN-HEADER-SIDES COMMON-STYLES START
 	&__left-side, &__right-side {
+		position: relative;
+		padding-top: 10px;
 		display: flex;
 		justify-content: space-between;
+		&::before {
+			position: absolute;
+			top: -45px;
+			font-size: 25px;
+			text-transform: uppercase;
+		}
 		&-link {
 			vertical-align: middle;
 			padding: 0;
@@ -32,6 +40,11 @@
 	//MAIN-HEADER-SIDES COMMON-STYLES END
 
 	&__left-side {
+		position: relative;
+		&::before {
+			content: '\2022 Мастерская подарков';
+			right: 0;
+		}
 		&-link {
 			margin-right: 26px; //на глаз подровнял левый блок меню
 			&:nth-last-child(1) {
@@ -45,6 +58,10 @@
 
 	&__right-side {
 		text-align: right;
+		&::before {
+			content: 'Дарьи Даниленко\2022';
+			left: 0;
+		}
 		&-link {
 			margin-left: 30px;
 			&:nth-child(1) {
