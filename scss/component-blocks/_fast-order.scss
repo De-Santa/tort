@@ -1,32 +1,78 @@
 .fast-order {
-	padding-bottom: 15px;
-	background-color: $bg-color-sec;
-	margin-bottom: 30px;
-	font-family: "KelsonSansRegular";
-	color: $tabs-color; 
-	&__header {
-		font-weight: bold;
-		font-family: "KelsonSansBold";
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 15px;
+	background-color: $bg-color-main;
+	textarea {
+		resize: none;
+	}
+//LAYOUT
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		&-item {
+			position: relative;
+			width: 47%;
+		}
+	}
+	&__input-icon {
+		position: absolute;
+		top: 8px;
+		left: 3px;
+		&-svg {
+			width: 25px;
+			height: 25px;
+			fill: $bg-color-sec;
+		}
+	}
+	&__input-title {
+		color: $bg-color-sec;
+	}
+	&__input {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 10px 12px;
+		padding-left: 32px;
+		background-color: #e4e0d5;
+		color: $bg-color-sec;
+		border: 1px solid #cac8c0;
 		margin: 0;
-		padding: 21px 0 21px 10px;
+		font-family: "KelsonSansRegular";
+		font-size: 15px;
+	}
+//LEFT-SIDE
+	&__left-side {
+		width: 65%;
+	}
+	.ezdz-dropzone {
+		width: 100%;
+		border: 4px dotted $bg-color-sec;
+		margin-top: 15px;
+	}
+	&__submit-button {
+		display: block;
+		width: 100%;
+		padding: 15px 0;
+		background-color: $bg-color-sec;
+		color: #fff;
+		border: none;
+		border-radius: 3px;
+		cursor: pointer;
+		font-family: "KelsonSansRegular";
+		font-size: 20px;
+		transition: all .2s ease;
+		&:hover {
+			background-color: $tabs-color;
 		}
-	&__form {
-		.fast-order__input-header {
-			margin-bottom: 15px;
-			.fast-order__input {
-				margin-top: 15px;
-				width: 100%;
-				color: #222;
-			}
-			.fast-order__input--text {
-				height: 200px;
-				resize: vertical;
-			}
-			.ezdz-dropzone {
-				width: 100%;
-				border: 4px dotted #fff;
-				margin-top: 15px;
-			}
+		&:focus {
+			outline: none;
 		}
+	}
+
+//RIGHT-SIDE
+	&__right-side {
+		width: 25%;
 	}
 }

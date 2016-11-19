@@ -1,0 +1,44 @@
+.widget {
+	background-color: #f7f6f4;
+	border: 1px solid #d9d9d9;
+	border-radius: 3px;
+	margin-bottom: 30px;
+	padding: 20px;
+	position: relative;
+	&__title {
+		position: relative;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 15px;
+		font-size: 20px;
+		color: $bg-color-sec;
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 70px;
+			height: 2px;
+			background-color: #e7e3d8;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	
+//PRODUCT-CATEGORIES WIDGET
+&__product-categories {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	&-item {
+		margin-bottom: 5px;
+		&-link {
+			color: $subtitle-color;
+			text-decoration: none;
+		}
+		&-value {
+			float: right;
+			color: $tabs-color;
+		}
+	}
+}
+}

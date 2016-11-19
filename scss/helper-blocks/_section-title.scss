@@ -1,5 +1,7 @@
 .section-title {
-	margin-bottom: 20px;
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: 30px;
 	&__main-title {
 		margin: 0;
 		padding: 0;
@@ -8,9 +10,11 @@
 		font-size: 40px;
 	}
 	&__subtitle {
-		width: 83%;
 		margin: 0 auto;
 		text-align: center;
-		color: #8a7f7b;
+		color: $subtitle-color;
+	}
+	&__subtitle--white {
+		color: $bg-color-main;
 	}
 }

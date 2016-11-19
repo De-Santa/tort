@@ -1,0 +1,26 @@
+.product-description {
+	text-align: center;
+	&__product-name, &__short-descr, &__full-descr  {
+		@include pm-reset;
+	}
+	&__product-type-icon {
+		width: 120px;
+		height: 120px;
+		fill: $subtitle-color;
+		margin-bottom: 10px;
+	}
+	&__product-name {
+		font-size: 40px;
+		color: $tabs-color;
+	}
+	&__short-descr {
+		font-size: 15px;
+		color: $subtitle-color;
+		margin-bottom: 30px;
+	}
+	&__full-descr {
+		font-size: 15px;
+		color: $bg-color-sec;
+		text-align: justify;
+	}
+}

@@ -1,25 +1,5 @@
 .seo-block {
 	position: relative;
-	z-index: 1;
-	height: 600px;
-	background-position: 10% 50%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-image: url("/img/parallax.jpg");
-	&::before {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(75,57,57,.75);
-	}
-	&__layout {
-		padding: 55px 0;
-		position: relative;
-		z-index: 2;
-	}
-
 	&__title {
 		padding: 0;
 		margin: 0;
@@ -42,17 +22,16 @@
 			width: 250px;
 			text-align: center;
 			&:hover > &-icon {
-				transform: rotate(360deg);
-				fill: $tabs-color;
-			}			
+				@include rotate-fill-transition($tabs-color);
+			}
 			&:hover > &-title {
 				color: $bg-color-main;
-			}			
+			}
 			&-icon {
 				fill: $bg-color-main;
 				width: 70px;
 				height: 70px;
-				transition: all .5s ease;
+				transition: all .7s ease;
 			}
 			&-title {
 				font-size: 25px;

@@ -1,0 +1,14 @@
+.catalog {
+	position: relative;
+	&__products-list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__product-card {
+		margin-bottom: 15px;
+		margin-right: 30px;
+		&:nth-child(3n) {
+			margin-right: 0px;
+		}
+	}
+}

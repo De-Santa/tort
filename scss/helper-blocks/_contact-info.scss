@@ -1,0 +1,38 @@
+.contact-info {
+	&__title {
+		margin: 0;
+		padding: 0;
+		margin-bottom: 23px;
+		color: $tabs-color;
+		font-size: 25px;
+	}
+	&__text {
+		padding: 0;
+		margin: 0;
+		margin-bottom: 30px;
+		color: $bg-color-sec;
+		font-family: "KelsonSansRegular";
+		font-size: 14px;
+	}
+	&__text--big-text {
+		font-size: 16px;
+	}
+	&__link {
+		display: block;
+		color: $tabs-color;
+		margin-bottom: 15px;
+		font-family: "KelsonSansRegular";
+		font-size: 18px;
+		&:hover > &-icon {
+			fill: $tabs-color;
+		}
+		&-icon {
+			width: 40px;
+			height: 40px;
+			vertical-align: middle;
+			margin-right: 5px;
+			fill: $bg-color-sec;
+			transition: all .5s ease;
+		}
+	}
+}

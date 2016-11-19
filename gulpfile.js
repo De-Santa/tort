@@ -1,14 +1,14 @@
-var gulp 					= require('gulp');
-var browserSync 	= require('browser-sync').create();
-var sass        	= require('gulp-sass');
-var	rename      	= require('gulp-rename');
-var	autoprefixer 	= require('gulp-autoprefixer');
-var cssnano 			= require('gulp-cssnano');
-var imagemin 		  = require('gulp-imagemin');
-var concat        = require('gulp-concat');
-var svgSprite     = require('gulp-svg-sprite');
-var	cheerio 			= require('gulp-cheerio');
-var uglify 				= require('gulp-uglify');
+var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
+var sass = require('gulp-sass');
+var	rename = require('gulp-rename');
+var	autoprefixer = require('gulp-autoprefixer');
+var cssnano = require('gulp-cssnano');
+var imagemin = require('gulp-imagemin');
+var concat = require('gulp-concat');
+var svgSprite = require('gulp-svg-sprite');
+var	cheerio = require('gulp-cheerio');
+var uglify = require('gulp-uglify');
 
 
 gulp.task('browser-sync', ['scss', 'scripts'], function() {
@@ -45,9 +45,10 @@ gulp.task('scripts', function() {
 		'./app/libs/packery/dist/packery.pkgd.min.js',
 		'./app/libs/dots/dots.js',
 		'./app/libs/slick-carousel/slick.js',
-		'./app/libs/jquery-slimscroll/jquery.slimscroll.min.js',		
-		'./app/libs/ezdz/jquery.ezdz.min.js',		
-		'./app/libs/jquery-ui/jquery-ui.min.js',		
+		'./app/libs/jquery-slimscroll/jquery.slimscroll.min.js',
+		'./app/libs/ezdz/jquery.ezdz.min.js',
+		'./app/libs/jquery-ui/jquery-ui.min.js',
+		'./app/libs/smoothproducts/smoothproducts.min.js'
 		])
 		.pipe(concat('libs.js'))
 		.pipe(uglify()) //Minify libs.js
@@ -64,13 +65,13 @@ gulp.task('watch', function () {
 
 gulp.task('svg-sprites', function () {
 	return gulp.src('app/img/svg-for-sprite/*.svg')
-	/*.pipe(cheerio({
+	.pipe(cheerio({
 	run: function ($) {
 		$('[fill]').removeAttr('fill');
 		$('[style]').removeAttr('style');
 	},
 	parserOptions: { xmlMode: true }
-	}))*/
+	}))
 	.pipe(svgSprite({
 		mode: {
 			symbol: {

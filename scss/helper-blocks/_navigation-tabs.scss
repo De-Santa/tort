@@ -1,26 +1,29 @@
 .navigation-tabs {
-	ul,li {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-	}
-	li {
+	&__item {
 		display: inline-block;
-		margin-right: 15px;
+		//margin-right: 5px;
 		padding: 15px 0;
+		background-color: #8c424e;
+		border: 2px solid $bg-color-sec;
+		border-top-right-radius: 10px; 
+		border-top-left-radius: 10px;
+		border-bottom: none;
+		color: darken($bg-color-main,10%);
 	}
+	&__link {
+		font-family: "KelsonSansRegular";
+		font-size: 18px;
+		padding: 15px 20px;
+		position: relative;
+		color: inherit;
+	}
+//ACTIVE TAB STYLING
 	.ui-tabs-active {
 		background: $tabs-color;
 		border: 2px solid $bg-color-sec;
 		border-top-right-radius: 10px; 
 		border-top-left-radius: 10px;
 		border-bottom: none;
-	}
-	&__link {
-		font-family: "KelsonSansRegular";
-		font-size: 18px;
 		color: $bg-color-main;
-		padding: 15px 20px;
-		position: relative;
 	}
 }

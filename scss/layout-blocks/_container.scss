@@ -1,0 +1,23 @@
+//CONTAINER SETTINGS
+.container {
+	position: relative;
+	width: 1200px;
+	//padding: 30px 15px;
+	margin-left: auto;
+	margin-right: auto;
+	@media only screen and (max-width: 1199px) {
+		width: 1000px;
+	}
+}
+
+.container--with-widget {
+	display: flex;
+	.container__leftside {
+		width: 80%;
+		margin-right: 20px;
+	}
+	.container__rightside {
+		width: 20%;
+	}
+}
+

@@ -1,7 +1,20 @@
 @import "bourbon";
 
 $bg-color-main: #F4F1E8;
-$bg-color-sec: #4B3939;
+$bg-color-sec: #4E3D3D;
 $tabs-color: #FF6D84;
 $accent-color: #C883FF;
 $test-color: #1BCDFF;
+$subtitle-color: #8A7F7B;
+
+$wrapper-borders-sprite: url("/img/sprite-png.png") repeat-x;
+
+@mixin pm-reset {
+	padding: 0;
+	margin: 0;
+}
+
+@mixin rotate-fill-transition($color) {
+	transform: rotate(360deg);
+	fill: $color;
+}
