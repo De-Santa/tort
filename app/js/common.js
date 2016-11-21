@@ -12,8 +12,8 @@ $(document).ready(function() {
 	$sectionSlider = $('#jsSectionSlider');
 
 	$welcomeSlider.slick ({
-		autoplay: true,
-		autoplaySpeed: 4000,
+		//autoplay: true,
+		//autoplaySpeed: 4000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		fade: true,
@@ -39,13 +39,13 @@ $(document).ready(function() {
 	$newProductsSlider = $('.new-products__slider');
 	$newProductsSlider.slick ({
 		slidesToShow: 4,
-		slidesToScroll: 4,
-		nextArrow: '<svg class="new-products__slider-next-arrow"><use xlink:href="#slider-left-arrow"></use></svg>',
-		prevArrow: '<svg class="new-products__slider-prev-arrow"><use xlink:href="#slider-right-arrow"></use></svg>'
+		slidesToScroll: 1,
+		prevArrow: '<svg class="new-products__slider-next-arrow"><use xlink:href="#slider-left-arrow"></use></svg>',
+		nextArrow: '<svg class="new-products__slider-prev-arrow"><use xlink:href="#slider-right-arrow"></use></svg>'
 	});
 
 	//TABS INIT
-	$( "#jsTabs" ).tabs({
+	$("#jsTabs" ).tabs({
 		active: 0
 	});
 
@@ -65,7 +65,7 @@ $('.sp-wrap').smoothproducts();
 			'use strict';
 
 			var file     = 'img/icons-sprite.html',
-				revision = 14;
+				revision = 17;
 
 			if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
 				return true;

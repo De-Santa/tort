@@ -80,6 +80,9 @@
 			text-overflow: ellipsis;
 			font-size: 14px;
 		}
+		&-descr--fixed-height {
+			min-height: 165px;
+		}
 	}
 	&__button {
 		display: block;

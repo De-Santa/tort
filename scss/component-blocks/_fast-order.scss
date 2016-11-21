@@ -52,23 +52,10 @@
 		margin-top: 15px;
 	}
 	&__submit-button {
-		display: block;
 		width: 100%;
-		padding: 15px 0;
 		background-color: $bg-color-sec;
-		color: #fff;
-		border: none;
 		border-radius: 3px;
-		cursor: pointer;
 		font-family: "KelsonSansRegular";
-		font-size: 20px;
-		transition: all .2s ease;
-		&:hover {
-			background-color: $tabs-color;
-		}
-		&:focus {
-			outline: none;
-		}
 	}
 
 //RIGHT-SIDE
