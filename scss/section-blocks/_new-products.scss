@@ -18,16 +18,28 @@
 			}
 		}
 		&-next-arrow {
-			left: 45%;
-			margin-left: -27px;
-		}
-		&-prev-arrow {
 			right: 45%;
 			margin-right: -27px;
 		}
-		&-slide {
-			position: relative;
-			padding: 0 15px;
+		&-prev-arrow {
+			left: 45%;
+			margin-left: -27px;
 		}
+		&-slide {
+			margin: 0 15px;
+		}
+	}
+	
+	&__grid {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 15px;
+	}
+	&__product-card {
+		margin: 0 15px 15px 15px;
+	}
+	
+	&__pagination {
+		text-align: center;
 	}
 }

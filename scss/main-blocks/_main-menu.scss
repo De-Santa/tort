@@ -36,6 +36,9 @@
 				height: 40px;
 			}
 		}
+		&-link--active {
+			color: $tabs-color;
+		}
 	}
 	//MAIN-HEADER-SIDES COMMON-STYLES END
 

@@ -3,12 +3,10 @@
 	&__products-list {
 		display: flex;
 		flex-wrap: wrap;
+		margin-bottom: 15px;
 	}
 	&__product-card {
+		margin: 0 15px;
 		margin-bottom: 15px;
-		margin-right: 30px;
-		&:nth-child(3n) {
-			margin-right: 0px;
-		}
 	}
 }

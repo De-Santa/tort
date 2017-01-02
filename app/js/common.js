@@ -40,8 +40,8 @@ $(document).ready(function() {
 	$newProductsSlider.slick ({
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		prevArrow: '<svg class="new-products__slider-next-arrow"><use xlink:href="#slider-left-arrow"></use></svg>',
-		nextArrow: '<svg class="new-products__slider-prev-arrow"><use xlink:href="#slider-right-arrow"></use></svg>'
+		prevArrow: '<svg class="new-products__slider-prev-arrow"><use xlink:href="#left-arrow"></use></svg>',
+		nextArrow: '<svg class="new-products__slider-next-arrow"><use xlink:href="#right-arrow"></use></svg>'
 	});
 
 	//TABS INIT
@@ -65,7 +65,7 @@ $('.sp-wrap').smoothproducts();
 			'use strict';
 
 			var file     = 'img/icons-sprite.html',
-				revision = 17;
+				revision = 18;
 
 			if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
 				return true;

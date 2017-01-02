@@ -9,26 +9,7 @@
 	padding: 0;
 	border: none;
 	text-align: center;
-	transition: background-color 0.3s;
 	cursor: pointer;
-	&::before {
-		content: '';
-		z-index: -1;
-		position: absolute;
-		width: 200%;
-		height: 200%;
-		top: -50%;
-		left: -50%;
-		transform: translate3d(0, -100%, 0) rotate3d(0, 0, 1, -10deg);
-		background-color: $tabs-color;
-	}
-	&:hover {
-		background-color: $tabs-color;
-		transition: background-color 0s 0.3s;
-	}
-	&:hover::before {
-		animation: anim-naira-1 0.3s forwards ease-in;
-	}
 	&:hover > &__icon {
 		transform: translate3d(0, 0, 0);
 	}
@@ -38,7 +19,7 @@
 	}
 
 	&__icon, &__text {
-		transition: transform 0.3s;
+		transition: transform 0.5s;
 		transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 	}
 	&__icon {
@@ -68,26 +49,4 @@
 
 .anim-button--round {
 	border-radius: 15px;
-}
-
-//BUTTON ANIMATIONS
-
-@keyframes anim-naira-1 {
-	50% {
-		transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, -10deg);
-		animation-timing-function: ease-out;
-	}
-	100% {
-		transform: translate3d(0, 0%, 0) rotate3d(0, 0, 1, 0deg);
-	}
-}
-
-@keyframes anim-naira-2 {
-	50% {
-		transform: translate3d(0, 50%, 0) rotate3d(0, 0, 1, 10deg);
-		animation-timing-function: ease-out;
-	}
-	100% {
-		transform: translate3d(0, 0%, 0) rotate3d(0, 0, 1, 0deg);
-	}
 }

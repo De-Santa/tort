@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Konfetti | Каталог | Морковный торт</title>
+		<title>Konfetti | Наши работы</title>
 		<meta name="description" content="">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,8 +24,14 @@
 		<!-- Load CSS End -->
 
 	</head>
-	<body class="product-page">
-
+	<body>
+		<!--<div class="color-pallete">
+			<div class="color-pallete__color-1"></div>
+			<div class="color-pallete__color-2"></div>
+			<div class="color-pallete__color-3"></div>
+			<div class="color-pallete__color-4"></div>
+			<div class="color-pallete__color-5"></div>
+		</div>-->
 	<!-- HEADER -->
 	<section class="welcome-screen">
 
@@ -33,7 +39,7 @@
 			<div class="container">
 				<div class="main-menu">
 					<div class="main-menu__left-side">
-						<a href="new-products.html" class="main-menu__left-side-link">Наши работы<svg class="main-menu__left-side-link-icon"><use xlink:href="#portfolio-icon"></use></svg></a>
+						<a href="new-products.html" class="main-menu__left-side-link main-menu__left-side-link--active">Наши работы<svg class="main-menu__left-side-link-icon"><use xlink:href="#portfolio-icon"></use></svg></a>
 						<a href="catalog.html" class="main-menu__left-side-link">Каталог<svg class="main-menu__left-side-link-icon"><use xlink:href="#catalog-icon"></use></svg></a>
 						<a href="https://vk.com/topic-43508061_33012236" target="_blank" class="main-menu__left-side-link">Отзывы<svg class="main-menu__left-side-link-icon"><use xlink:href="#reviews-icon"></use></svg></a>
 					</div>
@@ -52,11 +58,10 @@
 		</header>
 
 		<div class="breadcrumbs">
-			<h2 class="breadcrumbs__page-title">Морковный торт</h1>
+			<h2 class="breadcrumbs__page-title">Наши работы</h2>
 			<ul class="breadcrumbs__list">
 				<li class="breadcrumbs__list-item"><a href="index.html" class="breadcrumbs__list-item-link">Главная</a></li>
-				<li class="breadcrumbs__list-item"><a href="catalog.html" class="breadcrumbs__list-item-link">Каталог</a></li>
-				<li class="breadcrumbs__list-item"><a href="#" class="breadcrumbs__list-item-link">Морковный торт</a></li>
+				<li class="breadcrumbs__list-item"><a href="#" class="breadcrumbs__list-item-link">Наши работы</a></li>
 			</ul>
 		</div>
 
@@ -68,50 +73,128 @@
 		</div>
 	</section>
 
-	<!-- PRODUCT SECTION -->
+<!-- NEW PRODUCTS SECTION -->
 	<div class="section-wrapper section-wrapper--light section-wrapper--light-border-top section-wrapper--light-border-bottom">
 		<div class="section-wrapper__content">
-			<div class="container container--with-widget">
-				<div class="container__leftside">
+			<div class="container">
+				<!--CATALOG-->
+				<section class="new-products">
+					<div class="new-products__grid">
+						<div class="new-products__product-card product-card">
+							<div class="product-card__icon"><svg class="product-card__icon-svg"><use xlink:href="#cake-icon"></use></svg></div>
+							<figure class="product-card__preview">
+								<img src="img/products/morkovniy-tort/morkovniy-tort-main.jpg" alt="" class="product-card__preview-image">
+								<figcaption class="product-card__preview-curtain"></figcaption>
+							</figure>
+							<div class="product-card__content">
+								<p class="product-card__content-title">Морковный торт</p>
+								<p class="product-card__content-descr">Сильный морковный тортик со смородиной, всякими дерзкими наполнителями, черешней, клубникой и шоколадом. Самый четкий подарок для ваших родных и близких</p>
+							</div>
+							<a href="product-page.html" class="product-card__button">Подробнее</a>
+						</div>
 
-					<!-- PRODUCT-GALLERY (SP-WRAP IS IMPORTANT CLASS, DO NOT DELETE (SEE PRODUCT-GALLERY.SCSS)) -->
-					<div class="product-gallery sp-wrap">
-						<a href="img/products/morkovniy-tort/morkovniy-tort-main.jpg" class="product-gallery__preview-link">
-							<img src="img/products/morkovniy-tort/morkovniy-tort-main.jpg" alt="" class="product-gallery__preview-image">
-						</a>
-						<a href="img/products/morkovniy-tort/morkovniy-tort-front.jpg" class="product-gallery__preview-link">
-							<img src="img/products/morkovniy-tort/morkovniy-tort-front.jpg" alt="" class="product-gallery__preview-image">
-						</a>
-						<a href="img/products/morkovniy-tort/morkovniy-tort-inside.jpg" class="product-gallery__preview-link">
-							<img src="img/products/morkovniy-tort/morkovniy-tort-inside.jpg" alt="" class="product-gallery__preview-image">
-						</a>
-						<a href="img/products/morkovniy-tort/morkovniy-tort-craft.jpg" class="product-gallery__preview-link">
-							<img src="img/products/morkovniy-tort/morkovniy-tort-craft.jpg" alt="" class="product-gallery__preview-image">
-						</a>
+						<div class="new-products__product-card product-card">
+							<div class="product-card__icon"><svg class="product-card__icon-svg"><use xlink:href="#topiariy-icon"></use></svg></div>
+							<figure class="product-card__preview">
+								<img src="img/products/chetkiy-topiariy/chetkiy-topiariy-product-card.jpg" alt="" class="product-card__preview-image">
+								<figcaption class="product-card__preview-curtain"></figcaption>
+							</figure>
+							<div class="product-card__content">
+								<p class="product-card__content-title">Четкий топиарий</p>
+								<p class="product-card__content-descr">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+							</div>
+							<a href="product-page-1-test.html" class="product-card__button">Подробнее</a>
+						</div>
+
+						<div class="new-products__product-card product-card">
+							<div class="product-card__icon"><svg class="product-card__icon-svg"><use xlink:href="#pryanik-icon"></use></svg></div>
+							<figure class="product-card__preview">
+								<img src="img/new-works/med-pryanik.jpg" alt="" class="product-card__preview-image">
+								<figcaption class="product-card__preview-curtain"></figcaption>
+							</figure>
+							<div class="product-card__content">
+								<p class="product-card__content-title">Суровый пряник</p>
+								<p class="product-card__content-descr">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свою но на берегу, рыбного назад эта предупреждал коварный, пор деревни?</p>
+							</div>
+							<a href="product-page-2-test.html" class="product-card__button">Подробнее</a>
+						</div>
+
+						<div class="new-products__product-card product-card">
+							<div class="product-card__icon"><svg class="product-card__icon-svg"><use xlink:href="#lolipop-icon"></use></svg></div>
+							<figure class="product-card__preview">
+								<img src="img/new-works/car-cake.jpg" alt="" class="product-card__preview-image">
+								<figcaption class="product-card__preview-curtain"></figcaption>
+							</figure>
+							<div class="product-card__content">
+								<p class="product-card__content-title">Дикий леденец</p>
+								<p class="product-card__content-descr">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свою но на берегу, рыбного назад эта предупреждал коварный, пор деревни? Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свою но на берегу, рыбного назад эта предупреждал коварный, пор деревни?</p>
+							</div>
+							<a href="#" class="product-card__button">Подробнее</a>
+						</div>
+
+						<div class="new-products__product-card product-card">
+							<div class="product-card__icon"><svg class="product-card__icon-svg"><use xlink:href="#topiariy-icon"></use></svg></div>
+							<figure class="product-card__preview">
+								<img src="img/new-works/katya-cake.jpg" alt="" class="product-card__preview-image">
+								<figcaption class="product-card__preview-curtain"></figcaption>
+							</figure>
+							<div class="product-card__content">
+								<p class="product-card__content-title">Четкий топиарий</p>
+								<p class="product-card__content-descr">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свою но на берегу, рыбного назад эта предупреждал коварный, пор деревни?</p>
+							</div>
+							<a href="#" class="product-card__button">Подробнее</a>
+						</div>
+
+						<div class="new-products__product-card product-card">
+							<div class="product-card__icon"><svg class="product-card__icon-svg"><use xlink:href="#cupcake-icon"></use></svg></div>
+							<figure class="product-card__preview">
+								<img src="img/new-works/veronika-cake.jpg" alt="" class="product-card__preview-image">
+								<figcaption class="product-card__preview-curtain"></figcaption>
+							</figure>
+							<div class="product-card__content">
+								<p class="product-card__content-title">Мощный капкейк</p>
+								<p class="product-card__content-descr">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свою но на берегу, рыбного назад эта предупреждал коварный, пор деревни?</p>
+							</div>
+							<a href="#" class="product-card__button">Подробнее</a>
+						</div>
+
+						<div class="new-products__product-card product-card">
+							<div class="product-card__icon"><svg class="product-card__icon-svg"><use xlink:href="#pryanik-icon"></use></svg></div>
+							<figure class="product-card__preview">
+								<img src="img/product-card/cupcake.jpg" alt="" class="product-card__preview-image">
+								<figcaption class="product-card__preview-curtain"></figcaption>
+							</figure>
+							<div class="product-card__content">
+								<p class="product-card__content-title">Суровый пряник</p>
+								<p class="product-card__content-descr">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свою но на берегу, рыбного назад эта предупреждал коварный, пор деревни?</p>
+							</div>
+							<a href="#" class="product-card__button">Подробнее</a>
+						</div>
+
+						<div class="new-products__product-card product-card">
+							<div class="product-card__icon"><svg class="product-card__icon-svg"><use xlink:href="#lolipop-icon"></use></svg></div>
+							<figure class="product-card__preview">
+								<img src="img/product-card/cupcake.jpg" alt="" class="product-card__preview-image">
+								<figcaption class="product-card__preview-curtain"></figcaption>
+							</figure>
+							<div class="product-card__content">
+								<p class="product-card__content-title">Дикий леденец</p>
+								<p class="product-card__content-descr">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свою но на берегу, рыбного назад эта предупреждал коварный, пор деревни?</p>
+							</div>
+							<a href="#" class="product-card__button">Подробнее</a>
+						</div>
 					</div>
-
-					<section class="product-description">
-						<svg class="product-description__product-type-icon"><use xlink:href="#cake-icon"></use></svg>
-						<h2 class="product-description__product-name">Морковный торт</h2>
-						<p class="product-description__short-descr">Сильный морковный тортик со смородиной, всякими дерзкими наполнителями, черешней, клубникой и шоколадом. Самый четкий подарок для ваших родных и близких</p>
-						<p class="product-description__full-descr">А вот и он! Мой первый двухъярусный красавец!!)) украшен живыми цветами, за которые отдельное спасибо lavandashop )) 4,4 кг , внутри прячется банан-клубника и груша-карамель. Все больше больше мне нравится печь тортики, это безумно затягивает скажу я вам)))</p>
-					</section>
-				</div>
-
-				<!--WIDGET MENU-->
-				<div class="sidebar container__rightside">
-					<div class="widget">
-						<h3 class="widget__title">Категории подарков</h3>
-						<ul class="widget__product-categories">
-							<li class="widget__product-categories-item"><a href="#" class="widget__product-categories-item-link">Торты</a><span class="widget__product-categories-item-value">(2)</span></li>
-							<li class="widget__product-categories-item"><a href="#" class="widget__product-categories-item-link">Топиарии</a><span class="widget__product-categories-item-value">(3)</span></li>
-							<li class="widget__product-categories-item"><a href="#" class="widget__product-categories-item-link">Капкейки</a><span class="widget__product-categories-item-value">(555)</span></li>
-							<li class="widget__product-categories-item"><a href="#" class="widget__product-categories-item-link">Магниты</a><span class="widget__product-categories-item-value">(6)</span></li>
-							<li class="widget__product-categories-item"><a href="#" class="widget__product-categories-item-link">Пирожные</a><span class="widget__product-categories-item-value">(33)</span></li>
-							<li class="widget__product-categories-item"><a href="#" class="widget__product-categories-item-link">Пряники</a><span class="widget__product-categories-item-value">(1)</span></li>
-						</ul>
+					<div class="new-products__pagination pagination">
+						<svg class="pagination__prev"><use xlink:href="#left-arrow"></use></svg>
+						<nav class="pagination__links">
+							<a href="#" class="pagination__link pagination__link--active">1</a>
+							<a href="#" class="pagination__link">2</a>
+							<a href="#" class="pagination__link">3</a>
+							<a href="#" class="pagination__link">4</a>
+						</nav>
+						<svg class="pagination__next"><use xlink:href="#right-arrow"></use></svg>
 					</div>
-				</div>
+				</section>
 			</div>
 		</div>
 	</div>
@@ -125,7 +208,8 @@
 					<p class="section-title__subtitle section-title__subtitle--white">Офромите быстрый заказ либо свяжитесь с нами по указанному телефону. Вы можете выслать фотографию с примером желаемого оформления подарка.</p>
 				</div>
 		<!-- FAST ORDER FORM-->
-				<section class="fast-order">
+				<section id="jsTabFastOrder" class="fast-order">
+
 					<div class="fast-order__left-side">
 						<form id="jsFastOrderForm" action="" class="fast-order__form">
 							<div class="fast-order__row">
@@ -148,7 +232,10 @@
 									<textarea name="fast-order-text" id="fastOrderText" class="fast-order__input" rows="13" placeholder="Оставьте сообщение здесь"></textarea>
 								</div>
 							</div>
-							<button class="fast-order__submit-button">Отправить</button>
+							<button class="fast-order__submit-button anim-button">
+								<svg class="anim-button__icon"><use xlink:href="#send-order-icon"></use></svg>
+								<span class="anim-button__text">Отправить</span>
+							</button>
 						</form>
 					</div>
 

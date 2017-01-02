@@ -1,0 +1,14 @@
+.design {
+	&__title{
+		text-align: center;
+	}
+	&__title--dark-wrapper {
+		color: #F4F1E8;
+	}
+	&__content-demo {
+		background-color: rgba(blue,0.5);
+	}
+	&__sidebar-demo {
+		background-color: rgba(red,0.5);
+	}
+}

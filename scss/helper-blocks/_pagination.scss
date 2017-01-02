@@ -1,0 +1,41 @@
+.pagination {
+	text-align: center;
+	&__prev, &__next {
+		width: 55px;
+		height: 55px;
+		fill: $bg-color-sec;
+		vertical-align: middle;
+		cursor: pointer;
+		transition: fill .5s ease;
+		&:hover {
+			fill: $tabs-color;
+		}
+	}
+	&__prev {
+		margin-right: 20px;
+	}
+
+	&__links {
+		display: inline-block;
+		margin-right: 20px;
+		vertical-align: middle;
+	}
+	&__link {
+		margin-right: 5px;
+		font-size: 19px;
+		color: $bg-color-sec;
+		transition: color .5s ease;
+		&:hover {
+			color: $tabs-color;
+		}
+		&:nth-last-child(1) {
+			margin-right: 0;
+		}
+	}
+	&__link--active {
+		color: $tabs-color;
+		font-size: 20px;
+		text-decoration: underline;
+	}
+
+}
